@@ -37,7 +37,7 @@ export function PieChart({
   
   useEffect(() => {
     if (animate) {
-      // Animate the data points one by one
+      // Reset chart data first for clean animation
       setChartData([]);
       
       const animateData = async () => {
@@ -63,15 +63,18 @@ export function PieChart({
           data={chartData}
           cx="50%"
           cy="50%"
-          labelLine={true}
-          outerRadius={90}
-          innerRadius={50}
-          paddingAngle={2}
+          labelLine={false} // Remove label lines for cleaner appearance
+          outerRadius={80} // Reduced from 90 to fit better
+          innerRadius={40} // Reduced from 50 to maintain proportions
+          paddingAngle={3} // Increased from 2 for better separation
           dataKey="value"
           nameKey="name"
-          label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+          label={({ name, percent }) => 
+            percent > 0.05 ? `${name} (${(percent * 100).toFixed(0)}%)` : ''
+          }
           animationDuration={800}
           animationEasing="ease-out"
+          isAnimationActive={true}
         >
           {chartData.map((entry, index) => (
             <Cell 
@@ -94,10 +97,11 @@ export function PieChart({
         />
         <Legend 
           verticalAlign="bottom" 
-          height={36} 
+          height={40} // Increased from 36 for better spacing
           iconType="circle"
+          layout="horizontal"
           formatter={(value, entry, index) => (
-            <span style={{ color: 'var(--foreground)' }}>{value}</span>
+            <span style={{ color: 'var(--foreground)', fontSize: '12px' }}>{value}</span>
           )}
         />
       </RechartsPieChart>

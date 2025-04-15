@@ -253,17 +253,18 @@ export default function Dashboard() {
                     <TabsTrigger value="product" className="h-8 px-3">Product</TabsTrigger>
                     <TabsTrigger value="region" className="h-8 px-3">Region</TabsTrigger>
                   </TabsList>
-                  <TabsContent value="product" className="mt-0 h-[350px]">
-                    <PieChart data={productData} />
-                  </TabsContent>
-                  <TabsContent value="region" className="mt-0 h-[350px]">
-                    <PieChart data={regionData} />
-                  </TabsContent>
                 </Tabs>
               </div>
             </CardHeader>
             <CardContent className="p-6">
-              {/* Content is now rendered via TabsContent inside the Tabs component */}
+              <Tabs defaultValue="product" className="h-full">
+                <TabsContent value="product" className="mt-0 h-[350px]">
+                  <PieChart data={productData} animate={true} />
+                </TabsContent>
+                <TabsContent value="region" className="mt-0 h-[350px]">
+                  <PieChart data={regionData} animate={true} />
+                </TabsContent>
+              </Tabs>
             </CardContent>
           </Card>
         </div>

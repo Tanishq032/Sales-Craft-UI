@@ -1,4 +1,3 @@
-
 import { ArrowUpRight, DollarSign, TrendingDown, TrendingUp } from "lucide-react";
 import { AreaChart } from "@/components/charts/AreaChart";
 import { BarChart } from "@/components/charts/BarChart";
@@ -114,11 +113,15 @@ export default function Revenue() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="chart-container p-4">
           <h2 className="text-lg font-semibold mb-4">Revenue by Product</h2>
-          <BarChart data={revenueByProduct} />
+          <div className="h-[350px]">
+            <BarChart data={revenueByProduct} />
+          </div>
         </div>
         <div className="chart-container p-4">
           <h2 className="text-lg font-semibold mb-4">Revenue by Channel</h2>
-          <BarChart data={revenueByChannel} color="hsl(var(--info))" />
+          <div className="h-[350px]">
+            <BarChart data={revenueByChannel} color="hsl(var(--info))" />
+          </div>
         </div>
       </div>
       
