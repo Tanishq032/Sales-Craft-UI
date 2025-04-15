@@ -96,7 +96,6 @@ export function AreaChart({
             strokeWidth: 0,
             fill: color,
             stroke: "white",
-            strokeWidth: 2, // This is the duplicate property
             className: "animate-pulse"
           }}
           strokeWidth={3}
