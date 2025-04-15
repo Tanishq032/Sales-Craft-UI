@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Calendar, ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface DateRangePickerProps {
   onSelect: (range: string) => void;
@@ -32,10 +33,22 @@ export function DateRangePicker({ onSelect, selected }: DateRangePickerProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="gap-2">
-          <Calendar className="h-4 w-4" />
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className={cn(
+            "gap-1.5 border-primary/20 h-9 relative group",
+            selected ? "text-foreground" : "text-muted-foreground"
+          )}
+        >
+          <Calendar className="h-3.5 w-3.5 text-primary group-hover:scale-110 transition-transform" />
           <span>{selectedLabel}</span>
-          <ChevronDown className="h-4 w-4 ml-1" />
+          <ChevronDown className="h-3.5 w-3.5 ml-1 opacity-70 group-hover:opacity-100 transition-opacity" />
+          
+          {/* Pill indicator for active filter */}
+          {selected && selected !== "last30days" && (
+            <span className="absolute -top-1 -right-1 h-2 w-2 bg-primary rounded-full animate-pulse" />
+          )}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48">
@@ -43,7 +56,10 @@ export function DateRangePicker({ onSelect, selected }: DateRangePickerProps) {
           <DropdownMenuItem 
             key={range.value}
             onClick={() => onSelect(range.value)}
-            className="cursor-pointer"
+            className={cn(
+              "cursor-pointer transition-colors",
+              selected === range.value && "bg-accent font-medium"
+            )}
           >
             {range.label}
           </DropdownMenuItem>
