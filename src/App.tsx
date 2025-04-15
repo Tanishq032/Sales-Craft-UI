@@ -8,7 +8,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DashboardLayout } from "@/components/DashboardLayout";
 import Dashboard from "@/pages/Dashboard";
 import Revenue from "@/pages/Revenue";
+import Performance from "@/pages/Performance";
+import Analytics from "@/pages/Analytics";
 import Team from "@/pages/Team";
+import Products from "@/pages/Products";
+import Settings from "@/pages/Settings";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,10 +41,42 @@ const App = () => (
             } 
           />
           <Route 
+            path="/performance" 
+            element={
+              <DashboardLayout>
+                <Performance />
+              </DashboardLayout>
+            } 
+          />
+          <Route 
+            path="/analytics" 
+            element={
+              <DashboardLayout>
+                <Analytics />
+              </DashboardLayout>
+            } 
+          />
+          <Route 
             path="/team" 
             element={
               <DashboardLayout>
                 <Team />
+              </DashboardLayout>
+            } 
+          />
+          <Route 
+            path="/products" 
+            element={
+              <DashboardLayout>
+                <Products />
+              </DashboardLayout>
+            } 
+          />
+          <Route 
+            path="/settings" 
+            element={
+              <DashboardLayout>
+                <Settings />
               </DashboardLayout>
             } 
           />
