@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# 📊 Sales Dashboard UI
 
-## Project info
+Welcome to the **Sales Dashboard** — a responsive, animated, and modern web application for visualizing sales performance, revenue insights, and business analytics.
 
-**URL**: https://lovable.dev/projects/d25a33ed-bb8a-4a24-81ea-8ac9e90da47a
+## 🔗 Project Live
 
-## How can I edit this code?
+👉 [View Live Project on Lovable](https://lovable.dev/projects/d25a33ed-bb8a-4a24-81ea-8ac9e90da47a)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d25a33ed-bb8a-4a24-81ea-8ac9e90da47a) and start prompting.
+- **React** (via Vite)
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui** components
+- **Fully animated** with smooth transitions and interactions
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ⚙️ Local Development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to make changes locally:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🌙 Features
 
-**Use GitHub Codespaces**
+- Responsive layout
+- Smooth chart & UI animations
+- Dark/light theme toggle
+- Interactive filters & insights
+- Built with modular components
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🚀 Deploy or Edit
 
-This project is built with:
+- Use [Lovable.dev](https://lovable.dev/projects/d25a33ed-bb8a-4a24-81ea-8ac9e90da47a) for instant UI edits
+- Or clone the repo and develop in your preferred environment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d25a33ed-bb8a-4a24-81ea-8ac9e90da47a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
